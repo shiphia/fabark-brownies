@@ -46,12 +46,35 @@
 
         <h3>⭐ Signature Fudgy Brownie</h3>
 
-        <p>₹150</p>
+       <p>₹150</p>
 
-        <button
-            onclick="addToCart('Signature Fudgy Brownie',150)">
-            Add to Cart
-        </button>
+<div class="quantity">
+
+    <button
+        onclick="changeQty('fudgy',-1)">
+        -
+    </button>
+
+    <span id="fudgyQty">1</span>
+
+    <button
+        onclick="changeQty('fudgy',1)">
+        +
+    </button>
+
+</div>
+
+<br>
+
+<button
+    onclick="addToCart(
+        'Signature Fudgy Brownie',
+        150,
+        'fudgy')">
+
+    Add to Cart
+
+</button>
 
     </div>
 
