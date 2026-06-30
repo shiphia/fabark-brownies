@@ -21,46 +21,70 @@ function changeQty(product,value){
         quantities[product];
 }
 
-function addToCart(
-    name,
-    price,
-    product){
+function addToCart(name,price,product){
 
-    let qty =
-        quantities[product];
+    let qty = quantities[product];
 
-    cart.push({
-        name:name,
-        price:price,
-        qty:qty
+    let existing =
+        cart.find(
+            item =>
+            item.name === name
+        );
+
+    if(existing){
+
+        existing.qty += qty;
+
+    }else{
+
+        cart.push({
+            name:name,
+            price:price,
+            qty:qty
+        });
+
+    }
+
+    total = 0;
+
+    cart.forEach(item=>{
+        total +=
+            item.price * item.qty;
     });
-
-    total +=
-        price*qty;
 
     displayCart();
 }
 function displayCart(){
 
-    let html="";
+    let html = "";
 
     cart.forEach(item=>{
 
-        html +=
-            `<p>
+        html += `
+            <p>
             ${item.name}
-            x ${item.qty}
+            × ${item.qty}
             = ₹${item.price*item.qty}
-            </p>`;
+            </p>
+        `;
     });
 
-    document.getElementById(
-        "cartItems"
-    ).innerHTML=html;
+    if(html===""){
+        html =
+            "No items added yet.";
+    }
 
-    document.getElementById(
-        "total"
-    ).innerHTML=total;
+    document
+        .getElementById(
+            "cartItems")
+        .innerHTML =
+            html;
+
+    document
+        .getElementById(
+            "total")
+        .innerHTML =
+            total;
 }
 function sendWhatsApp(){
 
