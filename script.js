@@ -1,3 +1,4 @@
+alert("FabARK script loaded");
 let cart=[];
 let total=0;
 
