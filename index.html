@@ -89,11 +89,23 @@
 
         <p>₹160</p>
 
-        <button
-            onclick="addToCart('Royal Walnut Brownie',160)">
-            Add to Cart
-        </button>
+<div class="quantity">
+    <button onclick="changeQty('walnut',-1)">-</button>
 
+    <span id="walnutQty">1</span>
+
+    <button onclick="changeQty('walnut',1)">+</button>
+</div>
+
+<br>
+
+<button
+onclick="addToCart(
+'Royal Walnut Brownie',
+160,
+'walnut')">
+Add to Cart
+</button>
     </div>
 
 
@@ -107,11 +119,31 @@
 
         <p>₹180</p>
 
-        <button
-            onclick="addToCart('Lotus Biscoff Brownie',180)">
-            Add to Cart
-        </button>
+<div class="quantity">
 
+    <button onclick="changeQty('lotus',-1)">
+        -
+    </button>
+
+    <span id="lotusQty">1</span>
+
+    <button onclick="changeQty('lotus',1)">
+        +
+    </button>
+
+</div>
+
+<br>
+
+<button
+onclick="addToCart(
+'Lotus Biscoff Brownie',
+180,
+'lotus')">
+
+Add to Cart
+
+</button>
     </div>
 
 
@@ -125,10 +157,33 @@
 
         <p>₹299</p>
 
-        <button
-            onclick="addToCart('Banana Walnut Cake',299)">
-            Add to Cart
-        </button>
+<div class="quantity">
+
+    <button onclick="changeQty('cake',-1)">
+        -
+    </button>
+
+    <span id="cakeQty">1</span>
+
+    <button onclick="changeQty('cake',1)">
+        +
+    </button>
+
+</div>
+
+<br>
+
+<button
+onclick="addToCart(
+'Banana Walnut Cake',
+299,
+'cake')">
+
+Add to Cart
+
+</button>
+
+        
 
     </div>
 
@@ -141,12 +196,35 @@
 
         <h3>🍪 Chocolate Chip Cookies</h3>
 
+        
+        
         <p>₹120</p>
 
-        <button
-            onclick="addToCart('Chocolate Chip Cookies',120)">
-            Add to Cart
-        </button>
+<div class="quantity">
+
+    <button onclick="changeQty('cookies',-1)">
+        -
+    </button>
+
+    <span id="cookiesQty">1</span>
+
+    <button onclick="changeQty('cookies',1)">
+        +
+    </button>
+
+</div>
+
+<br>
+
+<button
+onclick="addToCart(
+'Chocolate Chip Cookies',
+120,
+'cookies')">
+
+Add to Cart
+
+</button>
 
     </div>
 
