@@ -1,5 +1,9 @@
 let quantities = {
-    fudgy:1
+    fudgy:1,
+    walnut:1,
+    lotus:1,
+    cake:1,
+    cookies:1
 };
 let cart=[];
 let total=0;
