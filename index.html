@@ -1,106 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FabARK</title>
+
+<title>FabARK Brownies</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<!-- HERO SECTION -->
+
 <div class="hero">
 
     <div class="top-logo">
-        <img src="images/logo.jpeg">
+        <img src="images/logo.jpeg" alt="FabARK Logo">
+
         <h1>FabARK</h1>
+
         <p>FABULOUS FOOD. RANDOM KINDNESS.</p>
     </div>
 
-    <img class="hero-image" src="images/hero-brownie.jpeg">
+    <img
+        class="hero-image"
+        src="images/hero-brownie.jpeg"
+        alt="Brownies">
 
 </div>
+
+<!-- PRODUCTS -->
 
 <section class="products">
 
-<h2>Our Specialities</h2>
+    <h2>Our Specialities</h2>
 
-<div class="product-card">
-    <img src="images/fudgy.webp">
-    <h3>⭐ Signature Fudgy Brownie</h3>
-    <p>₹150</p>
-    <button onclick="addToCart('Signature Fudgy Brownie',150)">
-        Add to Cart
-    </button>
-</div>
+    <div class="product-card">
 
-<div class="product-card">
-    <img src="images/walnut.jpg">
-    <h3>🌰 Royal Walnut Brownie</h3>
-    <p>₹160</p>
-    <button onclick="addToCart('Royal Walnut Brownie',160)">
-        Add to Cart
-    </button>
-</div>
+        <img
+            src="images/fudgy.webp"
+            alt="Fudgy Brownie">
 
-<div class="product-card">
-    <img src="images/lotus.jpg">
-    <h3>👑 Lotus Biscoff Brownie</h3>
-    <p>₹180</p>
-    <button onclick="addToCart('Lotus Biscoff Brownie',180)">
-        Add to Cart
-    </button>
-</div>
+        <h3>⭐ Signature Fudgy Brownie</h3>
 
-<div class="product-card">
-    <img src="images/cake.jpg">
-    <h3>🍌 Banana Walnut Chocolate Cake</h3>
-    <p>₹299</p>
-    <button onclick="addToCart('Banana Walnut Cake',299)">
-        Add to Cart
-    </button>
-</div>
+        <p>₹150</p>
 
-<div class="product-card">
-    <img src="images/cookies.jpg">
-    <h3>🍪 Chocolate Chip Cookies</h3>
-    <p>₹120</p>
-    <button onclick="addToCart('Chocolate Chip Cookies',120)">
-        Add to Cart
-    </button>
-</div>
+        <button
+            onclick="addToCart('Signature Fudgy Brownie',150)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <div class="product-card">
+
+        <img
+            src="images/walnut.jpg"
+            alt="Walnut Brownie">
+
+        <h3>🌰 Royal Walnut Brownie</h3>
+
+        <p>₹160</p>
+
+        <button
+            onclick="addToCart('Royal Walnut Brownie',160)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <div class="product-card">
+
+        <img
+            src="images/lotus.jpg"
+            alt="Lotus Brownie">
+
+        <h3>👑 Lotus Biscoff Brownie</h3>
+
+        <p>₹180</p>
+
+        <button
+            onclick="addToCart('Lotus Biscoff Brownie',180)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <div class="product-card">
+
+        <img
+            src="images/cake.jpg"
+            alt="Cake">
+
+        <h3>🍌 Banana Walnut Chocolate Cake</h3>
+
+        <p>₹299</p>
+
+        <button
+            onclick="addToCart('Banana Walnut Cake',299)">
+            Add to Cart
+        </button>
+
+    </div>
+
+
+    <div class="product-card">
+
+        <img
+            src="images/cookies.jpg"
+            alt="Cookies">
+
+        <h3>🍪 Chocolate Chip Cookies</h3>
+
+        <p>₹120</p>
+
+        <button
+            onclick="addToCart('Chocolate Chip Cookies',120)">
+            Add to Cart
+        </button>
+
+    </div>
 
 </section>
+
+
+<!-- CART -->
 
 <section class="cart">
 
-<h2>Your Order</h2>
+    <h2>Your Order</h2>
 
-<div id="cartItems"></div>
+    <div id="cartItems">
+        No items added yet.
+    </div>
 
-<h3>Total ₹<span id="total">0</span></h3>
+    <h3>
+        Total ₹<span id="total">0</span>
+    </h3>
 
-<input id="name" placeholder="Your Name">
+    <input
+        id="name"
+        placeholder="Your Name">
 
-<input id="phone" placeholder="Phone Number">
+    <input
+        id="phone"
+        placeholder="Phone Number">
 
-<textarea id="address"
-placeholder="Delivery Address"></textarea>
+    <textarea
+        id="address"
+        placeholder="Delivery Address">
+    </textarea>
 
-<p><b>Bangalore only (delivery charges apply)</b></p>
+    <p>
+        <b>
+            Bangalore delivery only
+            (delivery charges apply)
+        </b>
+    </p>
 
-<button class="whatsapp"
-onclick="sendWhatsApp()">
-Order via WhatsApp
-</button>
+    <button
+        class="whatsapp"
+        onclick="sendWhatsApp()">
+
+        Order via WhatsApp
+
+    </button>
 
 </section>
 
-<a class="floating"
-href="https://wa.me/918921274668"
-target="_blank">
-WhatsApp
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="floating"
+    href="https://wa.me/919110883613"
+    target="_blank">
+
+    WhatsApp
+
 </a>
+
+
 <script src="script.js"></script>
+
 </body>
 </html>
