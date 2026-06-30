@@ -1,31 +1,63 @@
-
+let quantities = {
+    fudgy:1
+};
 let cart=[];
 let total=0;
 
-function addToCart(name,price){
+function changeQty(product,value){
+
+    quantities[product]+=value;
+
+    if(quantities[product]<1)
+        quantities[product]=1;
+
+    document.getElementById(
+        product+"Qty"
+    ).innerHTML=
+        quantities[product];
+}
+
+function addToCart(
+    name,
+    price,
+    product){
+
+    let qty =
+        quantities[product];
 
     cart.push({
         name:name,
-        price:price
+        price:price,
+        qty:qty
     });
 
-    total+=price;
+    total +=
+        price*qty;
 
     displayCart();
 }
-
 function displayCart(){
 
     let html="";
 
     cart.forEach(item=>{
-        html += `<p>${item.name} - ₹${item.price}</p>`;
+
+        html +=
+            `<p>
+            ${item.name}
+            x ${item.qty}
+            = ₹${item.price*item.qty}
+            </p>`;
     });
 
-    document.getElementById("cartItems").innerHTML=html;
-    document.getElementById("total").innerHTML=total;
-}
+    document.getElementById(
+        "cartItems"
+    ).innerHTML=html;
 
+    document.getElementById(
+        "total"
+    ).innerHTML=total;
+}
 function sendWhatsApp(){
 
     let name=
