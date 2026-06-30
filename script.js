@@ -101,10 +101,16 @@ function sendWhatsApp(){
         "Hello FabARK!%0A%0AI would like to order:%0A";
 
     cart.forEach(item=>{
-        message +=
-            "• "+item.name+
-            " - ₹"+item.price+"%0A";
-    });
+
+    message +=
+        "• " +
+        item.name +
+        " × " +
+        item.qty +
+        " = ₹" +
+        (item.price * item.qty) +
+        "%0A";
+});
 
     message +=
         "%0ATotal: ₹"+total+
