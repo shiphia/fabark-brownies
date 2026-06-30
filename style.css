@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#F7F2E9;
+    color:#3B2314;
+}
+
+header{
+    background:#3B2314;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:120px;
+    border-radius:50%;
+}
+
+.hero-image{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+}
+
+.products{
+    padding:30px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+button{
+    background:#9B111E;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.cart{
+    padding:30px;
+    background:#fff;
+}
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+.whatsapp{
+    background:#25D366;
+}
+
+footer{
+    background:#3B2314;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
