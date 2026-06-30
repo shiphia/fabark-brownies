@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FabARK Brownies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="images/logo.jpeg" class="logo">
+        <h1>FabARK</h1>
+        <p>FABULOUS FOOD. RANDOM KINDNESS.</p>
+    </div>
+</header>
+
+<section class="hero">
+    <img src="images/hero-brownie.jpeg" class="hero-image">
+</section>
+
+<section class="products">
+    <h2>Our Menu</h2>
+
+    <div class="card">
+        <h3>Signature Fudgy Brownie</h3>
+        <p>₹150</p>
+        <button onclick="addToCart('Signature Fudgy Brownie',150)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Royal Walnut Brownie</h3>
+        <p>₹160</p>
+        <button onclick="addToCart('Royal Walnut Brownie',160)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Lotus Biscoff Brownie</h3>
+        <p>₹180</p>
+        <button onclick="addToCart('Lotus Biscoff Brownie',180)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Banana Walnut Chocolate Chips Cake</h3>
+        <p>₹299</p>
+        <button onclick="addToCart('Banana Walnut Cake',299)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="card">
+        <h3>Chocolate Chip Cookies (Pack of 2)</h3>
+        <p>₹120</p>
+        <button onclick="addToCart('Chocolate Chip Cookies',120)">
+            Add to Cart
+        </button>
+    </div>
+</section>
+
+<section class="cart">
+    <h2>Your Order</h2>
+
+    <div id="cartItems"></div>
+
+    <h3>Total: ₹<span id="total">0</span></h3>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <textarea id="address"
+        placeholder="Delivery Address"></textarea>
+
+    <p><b>Bangalore only (delivery charges apply)</b></p>
+
+    <button class="whatsapp"
+        onclick="sendWhatsApp()">
+        Order on WhatsApp
+    </button>
+</section>
+
+<footer>
+    <p>© FabARK | Bangalore</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
