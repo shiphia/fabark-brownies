@@ -51,9 +51,15 @@ function addToCart(name,price,product){
         total +=
             item.price * item.qty;
     });
+    quantities[product] = 1;
+
+document.getElementById(
+    product + "Qty"
+).innerHTML = 1;
 
     displayCart();
 }
+
 function displayCart(){
 
     let html = "";
