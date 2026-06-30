@@ -1,80 +1,106 @@
-body{
+/* GENERAL */
+
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f6f1e8;
-    color:#3b2314;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Header */
-.hero{
-    background:#f6f1e8;
+body{
+    font-family:Arial, sans-serif;
+    background:#F7F2E9;
+    color:#3B2314;
 }
+
+/* HEADER */
 
 .top-logo{
     text-align:center;
     padding:20px;
+    background:#F7F2E9;
 }
 
 .top-logo img{
-    width:120px;
+    width:90px;
     border-radius:50%;
+    margin-bottom:10px;
 }
 
 .top-logo h1{
-    margin:10px 0 5px;
     font-size:48px;
+    margin-bottom:8px;
+    color:#3B2314;
 }
 
 .top-logo p{
-    color:#8B0000;
+    font-size:14px;
     font-weight:bold;
+    color:#9B111E;
+    letter-spacing:1px;
 }
 
-/* Hero image */
+/* HERO IMAGE */
+
 .hero-image{
     width:100%;
-    height:450px;
+    height:400px;
     object-fit:cover;
+    display:block;
 }
 
-/* Products */
+/* PRODUCTS SECTION */
+
 .products{
-    padding:40px;
+    padding:50px 30px;
     text-align:center;
 }
 
 .products h2{
-    font-size:32px;
-    margin-bottom:30px;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#3B2314;
 }
 
+/* PRODUCT CARD */
+
 .product-card{
+    display:inline-block;
+    vertical-align:top;
+    width:220px;
     background:white;
-    width:280px;
     margin:15px;
     padding:20px;
     border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    display:inline-block;
-    vertical-align:top;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
 }
 
 .product-card img{
-    width:250px;
-    height:250px;
+    width:100%;
+    height:180px;
     object-fit:cover;
     border-radius:10px;
+    margin-bottom:15px;
 }
 
 .product-card h3{
-    margin-top:15px;
+    font-size:18px;
+    margin-bottom:10px;
+    min-height:50px;
 }
 
 .product-card p{
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
+    margin-bottom:15px;
+    color:#9B111E;
 }
+
+/* BUTTONS */
 
 button{
     background:#9B111E;
@@ -83,45 +109,107 @@ button{
     padding:12px 25px;
     border-radius:8px;
     cursor:pointer;
-    font-size:16px;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
 button:hover{
-    background:#7a0d18;
+    background:#6F0913;
 }
 
-/* Cart */
+/* CART SECTION */
+
 .cart{
     background:white;
-    margin:30px;
+    margin:40px;
     padding:30px;
     border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
+
+.cart h2{
+    margin-bottom:20px;
+}
+
+#cartItems{
+    margin-bottom:20px;
+}
+
+#cartItems p{
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+
+.cart h3{
+    margin:20px 0;
+    color:#9B111E;
+}
+
+/* FORM */
 
 input,
 textarea{
     width:100%;
-    padding:12px;
+    padding:15px;
     margin:10px 0;
-    box-sizing:border-box;
     border:1px solid #ddd;
     border-radius:8px;
+    font-size:16px;
 }
+
+textarea{
+    height:100px;
+}
+
+/* WHATSAPP ORDER BUTTON */
 
 .whatsapp{
     background:#25D366;
+    width:100%;
+    padding:15px;
+    font-size:18px;
 }
 
-/* Floating button */
+.whatsapp:hover{
+    background:#1EBE5D;
+}
+
+/* FLOATING WHATSAPP */
+
 .floating{
     position:fixed;
-    right:20px;
     bottom:20px;
+    right:20px;
     background:#25D366;
     color:white;
-    padding:15px 20px;
-    border-radius:30px;
     text-decoration:none;
+    padding:15px 20px;
+    border-radius:50px;
     font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .top-logo h1{
+        font-size:36px;
+    }
+
+    .hero-image{
+        height:250px;
+    }
+
+    .product-card{
+        width:90%;
+        margin:15px auto;
+        display:block;
+    }
+
+    .cart{
+        margin:20px;
+    }
 }
