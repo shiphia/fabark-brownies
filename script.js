@@ -106,11 +106,16 @@ function removeFromCart(index){
 }
 function clearCart(){
 
-    cart = [];
+    if(confirm(
+        "Are you sure you want to clear your cart?"
+    )){
 
-    total = 0;
+        cart = [];
 
-    displayCart();
+        total = 0;
+
+        displayCart();
+    }
 }
 function sendWhatsApp(){
 
