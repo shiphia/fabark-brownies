@@ -191,13 +191,15 @@ async function loadProducts(){
     </button>
 
 </div>
-            <button onclick=
-            "addToCart(
-            '${name}',
-            ${price},
-            '${productId}')">
-                Add to Cart
-            </button>
+            <button
+class="add-cart-btn"
+onclick=
+"addToCart(
+'${name}',
+${price},
+'${productId}')">
+    Add to Cart
+</button>
 
         </div>
         `;
