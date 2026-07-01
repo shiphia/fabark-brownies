@@ -331,3 +331,28 @@ textarea{
     transform:translateY(-5px);
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+/* PRODUCT BADGES */
+
+.product-card{
+    position:relative;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+    color:white;
+    z-index:10;
+}
+
+.bestseller{
+    background:#E63946;
+}
+
+.premium{
+    background:#D4A017;
+}
