@@ -104,6 +104,14 @@ function removeFromCart(index){
 
     displayCart();
 }
+function clearCart(){
+
+    cart = [];
+
+    total = 0;
+
+    displayCart();
+}
 function sendWhatsApp(){
 
     let name=
