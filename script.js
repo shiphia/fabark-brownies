@@ -74,7 +74,7 @@ function displayCart(){
 
                 <button
                 onclick="removeFromCart(${index})">
-                    ❌
+                    x
                 </button>
             </p>
         `;
