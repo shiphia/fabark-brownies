@@ -259,3 +259,65 @@ textarea{
 .clear-cart:hover{
     background:#333;
 }
+/* BULK ORDERS */
+
+.bulk-orders{
+    background:white;
+    margin:40px;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.bulk-orders h2{
+    margin-bottom:15px;
+    color:#3B2314;
+}
+
+.bulk-text{
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.bulk-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.bulk-card{
+    background:#F7F2E9;
+    padding:25px;
+    width:180px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    font-size:28px;
+}
+
+.bulk-card h3{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.bulk-note{
+    font-weight:bold;
+    color:#9B111E;
+    margin-bottom:25px;
+}
+
+.bulk-button{
+    background:#9B111E;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    display:inline-block;
+}
+
+.bulk-button:hover{
+    background:#7a0d18;
+}
