@@ -1,12 +1,6 @@
 const sheetURL =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vRoAMNzXmiaJV0KcdTlTQDqSKmDe_gwmV7QvIzFx0UYxTQOY71pa7dEStsg2mRyBKoJoG8sfHSHaQjb/pub?gid=0&single=true&output=csv";
-let quantities = {
-    fudgy:1,
-    walnut:1,
-    lotus:1,
-    cake:1,
-    cookies:1
-};
+let quantities = {};
 let cart=[];
 let total=0;
 
@@ -159,6 +153,10 @@ async function loadProducts(){
         const productId =
             cols[7].trim();
 
+        if(!quantities[productId]){
+    quantities[productId] = 1;
+}
+
         if(available !== "TRUE")
             return;
 
@@ -168,9 +166,10 @@ async function loadProducts(){
             <img src="images/${image}">
 
             ${badge ?
-            `<div class="badge">${badge}</div>`
-            : ""}
-
+`<div class="badge ${badge.toLowerCase()}">
+    ${badge}
+</div>`
+: ""}
             <h3>${name}</h3>
 
             <p>${description}</p>
