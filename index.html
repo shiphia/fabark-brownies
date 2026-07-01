@@ -1,345 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>FabARK Brownies</title>
+    <title>FabARK</title>
 
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet"
+          href="style.css">
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+    <!-- HEADER -->
 
-<div class="hero">
+    <div class="hero">
 
-    <div class="top-logo">
-        <img src="images/logo.jpeg" alt="FabARK Logo">
+        <div class="top-logo">
+            <img src="images/logo.jpeg">
 
-        <h1>FabARK</h1>
+            <h1>FabARK</h1>
 
-        <p>FABULOUS FOOD. RANDOM KINDNESS.</p>
-    </div>
-
-    <img
-        class="hero-image"
-        src="images/fudgy.webp"
-        alt="Brownies">
-
-</div>
-
-<!-- PRODUCTS -->
-
-<section class="products">
-
-    <h2>Our Specialities</h2>
-
-    <div class="product-card">
-        <span class="badge bestseller">
-        ⭐ BEST SELLER
-    </span>
-
-        <img
-            src="images/fudgy.webp"
-            alt="Fudgy Brownie">
-
-        <h3>⭐ Signature Fudgy Brownie</h3>
-
-       <p>₹150</p>
-
-<div class="quantity">
-
-    <button
-        onclick="changeQty('fudgy',-1)">
-        -
-    </button>
-
-    <span id="fudgyQty">1</span>
-
-    <button
-        onclick="changeQty('fudgy',1)">
-        +
-    </button>
-
-</div>
-
-<br>
-
-<button
-    onclick="addToCart(
-        'Signature Fudgy Brownie',
-        150,
-        'fudgy')">
-
-    Add to Cart
-
-</button>
-
-    </div>
-
-
-    <div class="product-card">
-
-        <img
-            src="images/walnut.jpg"
-            alt="Walnut Brownie">
-
-        <h3>🌰 Royal Walnut Brownie</h3>
-
-        <p>₹160</p>
-
-<div class="quantity">
-    <button onclick="changeQty('walnut',-1)">-</button>
-
-    <span id="walnutQty">1</span>
-
-    <button onclick="changeQty('walnut',1)">+</button>
-</div>
-
-<br>
-
-<button
-onclick="addToCart(
-'Royal Walnut Brownie',
-160,
-'walnut')">
-Add to Cart
-</button>
-    </div>
-
-
-    <div class="product-card">
-
-        <img
-            src="images/lotus.jpg"
-            alt="Lotus Brownie">
-
-        <h3>👑 Lotus Biscoff Brownie</h3>
-
-        <p>₹180</p>
-
-<div class="quantity">
-
-    <button onclick="changeQty('lotus',-1)">
-        -
-    </button>
-
-    <span id="lotusQty">1</span>
-
-    <button onclick="changeQty('lotus',1)">
-        +
-    </button>
-
-</div>
-
-<br>
-
-<button
-onclick="addToCart(
-'Lotus Biscoff Brownie',
-180,
-'lotus')">
-
-Add to Cart
-
-</button>
-    </div>
-
-
-    <div class="product-card">
-
-        <img
-            src="images/cake.jpg"
-            alt="Cake">
-
-        <h3>🍌 Banana Walnut Chocolate Cake</h3>
-
-        <p>₹299</p>
-
-<div class="quantity">
-
-    <button onclick="changeQty('cake',-1)">
-        -
-    </button>
-
-    <span id="cakeQty">1</span>
-
-    <button onclick="changeQty('cake',1)">
-        +
-    </button>
-
-</div>
-
-<br>
-
-<button
-onclick="addToCart(
-'Banana Walnut Cake',
-299,
-'cake')">
-
-Add to Cart
-
-</button>
-
-        
-
-    </div>
-
-
-    <div class="product-card">
-
-        <img
-            src="images/cookies.jpg"
-            alt="Cookies">
-
-        <h3>🍪 Chocolate Chip Cookies</h3>
-
-        
-        
-        <p>₹120</p>
-
-<div class="quantity">
-
-    <button onclick="changeQty('cookies',-1)">
-        -
-    </button>
-
-    <span id="cookiesQty">1</span>
-
-    <button onclick="changeQty('cookies',1)">
-        +
-    </button>
-
-</div>
-
-<br>
-
-<button
-onclick="addToCart(
-'Chocolate Chip Cookies',
-120,
-'cookies')">
-
-Add to Cart
-
-</button>
-
-    </div>
-
-</section>
-
-<section class="bulk-orders">
-
-    <h2>🎉 Bulk Orders & Special Occasions</h2>
-
-    <p class="bulk-text">
-        Celebrate life's special moments with handcrafted treats from FabARK.
-    </p>
-
-    <div class="bulk-grid">
-
-        <div class="bulk-card">
-            🎂
-            <h3>Birthdays</h3>
+            <p>
+                FABULOUS FOOD. RANDOM KINDNESS.
+            </p>
         </div>
 
-        <div class="bulk-card">
-            🎁
-            <h3>Corporate Gifts</h3>
-        </div>
-
-        <div class="bulk-card">
-            🥳
-            <h3>Parties</h3>
-        </div>
-
-        <div class="bulk-card">
-            🎊
-            <h3>Festivals</h3>
-        </div>
+        <img class="hero-image"
+             src="images/hero-brownie.jpeg">
 
     </div>
 
-    <p class="bulk-note">
-        ✨ Custom orders and gift packaging available.
-    </p>
+
+    <!-- PRODUCTS -->
+
+    <section class="products">
+
+        <h2>Our Specialities</h2>
+
+        <!-- Products load from Google Sheet -->
+        <div id="productsContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- BULK ORDERS -->
+
+    <section class="bulk-orders">
+
+        <h2>
+            🎉 Bulk Orders &
+            Special Occasions
+        </h2>
+
+        <p>
+            Planning a celebration?
+            We've got you covered!
+        </p>
+
+        <div class="bulk-grid">
+
+            <div class="bulk-card">
+                🎂
+                <h3>Birthdays</h3>
+            </div>
+
+            <div class="bulk-card">
+                🎁
+                <h3>Corporate Gifts</h3>
+            </div>
+
+            <div class="bulk-card">
+                🥳
+                <h3>Parties</h3>
+            </div>
+
+            <div class="bulk-card">
+                🎊
+                <h3>Festivals</h3>
+            </div>
+
+        </div>
+
+        <p class="bulk-note">
+            ✨ Custom orders and
+            gift packaging available.
+        </p>
+
+        <a
+           class="bulk-button"
+           href="https://wa.me/918921274668?text=Hi%20FabARK,%20I%20would%20like%20to%20enquire%20about%20bulk%20orders."
+           target="_blank">
+
+            Enquire About Bulk Orders
+
+        </a>
+
+    </section>
+
+
+    <!-- CART -->
+
+    <section class="cart">
+
+        <h2>Your Order</h2>
+
+        <button
+            class="clear-cart"
+            onclick="clearCart()">
+
+            🗑 Clear Cart
+
+        </button>
+
+        <div id="cartItems">
+            No items added yet.
+        </div>
+
+        <h3>
+            Total ₹<span id="total">0</span>
+        </h3>
+
+        <input
+            id="name"
+            placeholder="Your Name">
+
+        <input
+            id="phone"
+            placeholder="Phone Number">
+
+        <textarea
+            id="address"
+            placeholder="Delivery Address">
+        </textarea>
+
+        <p>
+            <b>
+                Currently delivering
+                across Bangalore only.
+                (delivery charges apply)
+            </b>
+        </p>
+
+        <button
+            class="whatsapp"
+            onclick="sendWhatsApp()">
+
+            Order via WhatsApp
+
+        </button>
+
+    </section>
+
+
+    <!-- FLOATING WHATSAPP -->
 
     <a
-        class="bulk-button"
-        href="https://wa.me/918921274668?text=Hello%20FabARK!%20I%20would%20like%20to%20place%20a%20bulk%20order."
+        class="floating"
+        href="https://wa.me/918921274668"
         target="_blank">
 
-        Enquire About Bulk Orders
+        WhatsApp
 
     </a>
 
-</section>
 
-<!-- CART -->
+    <!-- JAVASCRIPT -->
 
-<section class="cart">
-
-    <h2>Your Order</h2>
-    <button
-    class="clear-cart"
-    onclick="clearCart()">
-    🗑️ Clear Cart
-</button>
-
-    <div id="cartItems">
-        No items added yet.
-    </div>
-
-    <h3>
-        Total ₹<span id="total">0</span>
-    </h3>
-
-    <input
-        id="name"
-        placeholder="Your Name">
-
-    <input
-        id="phone"
-        placeholder="Phone Number">
-
-    <textarea id="address" placeholder="Delivery Address"></textarea>
-
-    <p>
-        <b>
-            Currently delivering across Bangalore only.
-            (delivery charges apply)
-        </b>
-    </p>
-
-    <button
-        class="whatsapp"
-        onclick="sendWhatsApp()">
-
-        Order via WhatsApp
-
-    </button>
-
-</section>
-
-
-<!-- FLOATING WHATSAPP -->
-
-<a
-    class="floating"
-    href="https://wa.me/919110883613"
-    target="_blank">
-
-    WhatsApp
-
-</a>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
