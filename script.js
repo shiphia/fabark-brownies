@@ -64,33 +64,45 @@ function displayCart(){
 
     let html = "";
 
-    cart.forEach(item=>{
+    cart.forEach((item,index)=>{
 
         html += `
             <p>
-            ${item.name}
-            × ${item.qty}
-            = ₹${item.price*item.qty}
+                ${item.name}
+                × ${item.qty}
+                = ₹${item.price * item.qty}
+
+                <button
+                onclick="removeFromCart(${index})">
+                    ❌
+                </button>
             </p>
         `;
     });
 
     if(html===""){
-        html =
-            "No items added yet.";
+        html = "No items added yet.";
     }
 
-    document
-        .getElementById(
-            "cartItems")
-        .innerHTML =
-            html;
+    document.getElementById(
+        "cartItems"
+    ).innerHTML = html;
 
-    document
-        .getElementById(
-            "total")
-        .innerHTML =
-            total;
+    document.getElementById(
+        "total"
+    ).innerHTML = total;
+}
+function removeFromCart(index){
+
+    cart.splice(index,1);
+
+    total = 0;
+
+    cart.forEach(item=>{
+        total += item.price * item.qty;
+    });
+
+    displayCart();
 }
 function sendWhatsApp(){
 
