@@ -176,22 +176,21 @@ async function loadProducts(){
 
             <h4>₹${price}</h4>
 
-            <div class="qty-box">
-                <button onclick=
-                "changeQty('${productId}',-1)">
-                -
-                </button>
+            <div class="quantity">
 
-                <span id="${productId}Qty">
-                    1
-                </span>
+    <button onclick="changeQty('${productId}',-1)">
+        −
+    </button>
 
-                <button onclick=
-                "changeQty('${productId}',1)">
-                +
-                </button>
-            </div>
+    <span id="${productId}Qty">
+        1
+    </span>
 
+    <button onclick="changeQty('${productId}',1)">
+        +
+    </button>
+
+</div>
             <button onclick=
             "addToCart(
             '${name}',
