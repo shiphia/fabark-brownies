@@ -321,3 +321,11 @@ textarea{
 .bulk-button:hover{
     background:#7a0d18;
 }
+.bulk-card{
+    transition:0.3s;
+}
+
+.bulk-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
