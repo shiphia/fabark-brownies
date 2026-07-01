@@ -244,33 +244,32 @@ textarea{
     justify-content:center;
     align-items:center;
     gap:12px;
-    margin:15px 0;
+    margin:12px 0;
 }
 
 .quantity button{
     width:32px;
     height:32px;
-    padding:0;
     border:none;
     border-radius:8px;
     background:#9B111E;
     color:white;
-    font-size:18px;
+    font-size:20px;
     font-weight:bold;
     cursor:pointer;
-    transition:0.2s;
+    padding:0;
+    transition:0.3s;
 }
 
 .quantity button:hover{
     background:#7a0d18;
-    transform:scale(1.05);
 }
 
 .quantity span{
-    width:28px;
+    min-width:20px;
     text-align:center;
     font-size:18px;
-    font-weight:600;
+    font-weight:bold;
     color:#3B2314;
 }
 #cartItems p{
