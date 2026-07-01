@@ -389,7 +389,7 @@ textarea{
 }
 
 
-.product-card button:last-child{
+.add-cart-btn{
     width:100%;
     background:#C1121F;
     color:white;
@@ -402,10 +402,9 @@ textarea{
     transition:0.3s;
 }
 
-.product-card button:last-child:hover{
+.add-cart-btn:hover{
     background:#9B111E;
 }
-
 .product-card h4{
     font-size:22px;
     color:#C1121F;
