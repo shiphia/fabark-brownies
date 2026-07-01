@@ -1,3 +1,5 @@
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vRoAMNzXmiaJV0KcdTlTQDqSKmDe_gwmV7QvIzFx0UYxTQOY71pa7dEStsg2mRyBKoJoG8sfHSHaQjb/pub?gid=0&single=true&output=csv";
 let quantities = {
     fudgy:1,
     walnut:1,
@@ -117,6 +119,98 @@ function clearCart(){
         displayCart();
     }
 }
+async function loadProducts(){
+
+    const response = await fetch(sheetURL);
+    const csv = await response.text();
+
+    const rows =
+        csv.split("\n")
+           .slice(1);
+
+    let html = "";
+
+    rows.forEach(row => {
+
+        const cols = row.split(",");
+
+        if(cols.length < 8)
+            return;
+
+        const name =
+            cols[0].trim();
+
+        const price =
+            cols[1].trim();
+
+        const image =
+            cols[2].trim();
+
+        const badge =
+            cols[4].trim();
+
+        const description =
+            cols[5].trim();
+
+        const available =
+            cols[6].trim()
+                   .toUpperCase();
+
+        const productId =
+            cols[7].trim();
+
+        if(available !== "TRUE")
+            return;
+
+        html += `
+        <div class="product-card">
+
+            <img src="images/${image}">
+
+            ${badge ?
+            `<div class="badge">${badge}</div>`
+            : ""}
+
+            <h3>${name}</h3>
+
+            <p>${description}</p>
+
+            <h4>₹${price}</h4>
+
+            <div class="qty-box">
+                <button onclick=
+                "changeQty('${productId}',-1)">
+                -
+                </button>
+
+                <span id="${productId}Qty">
+                    1
+                </span>
+
+                <button onclick=
+                "changeQty('${productId}',1)">
+                +
+                </button>
+            </div>
+
+            <button onclick=
+            "addToCart(
+            '${name}',
+            ${price},
+            '${productId}')">
+                Add to Cart
+            </button>
+
+        </div>
+        `;
+    });
+
+    document.getElementById(
+        "productsContainer"
+    ).innerHTML = html;
+}
+
+loadProducts();
 function sendWhatsApp(){
 
     let name=
