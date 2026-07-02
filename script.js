@@ -246,6 +246,35 @@ async function loadProducts(){
     ).innerHTML = html;
 }
 loadProducts();
+function searchProducts(){
+
+    let input =
+        document.getElementById(
+            "searchInput"
+        ).value.toLowerCase();
+
+    let cards =
+        document.querySelectorAll(
+            ".product-card"
+        );
+
+    cards.forEach(card => {
+
+        let text =
+            card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            card.style.display =
+                "inline-block";
+
+        }else{
+
+            card.style.display =
+                "none";
+        }
+    });
+}
 function sendWhatsApp(){
 
     let name=
