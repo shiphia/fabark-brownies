@@ -183,33 +183,42 @@ async function loadProducts(){
 
                 <h4>₹${price}</h4>
 
-                <div class="quantity">
+                ${available === "TRUE" ? `
 
-                    <button onclick="changeQty('${productId}',-1)">
-                        −
-                    </button>
+<div class="quantity">
 
-                    <span id="${productId}Qty">
-                        1
-                    </span>
+    <button onclick="changeQty('${productId}',-1)">
+        −
+    </button>
 
-                    <button onclick="changeQty('${productId}',1)">
-                        +
-                    </button>
+    <span id="${productId}Qty">
+        1
+    </span>
 
-                </div>
+    <button onclick="changeQty('${productId}',1)">
+        +
+    </button>
 
-                <button
-                    class="add-cart-btn"
-                    onclick="addToCart(
-                    '${name}',
-                    ${price},
-                    '${productId}')">
+</div>
 
-                    Add to Cart
+<button
+    class="add-cart-btn"
+    onclick="addToCart(
+    '${name}',
+    ${price},
+    '${productId}')">
 
-                </button>
+    Add to Cart
 
+</button>
+
+` : `
+
+<div class="out-of-stock">
+    OUT OF STOCK
+</div>
+
+`}
             </div>
 
         `);
