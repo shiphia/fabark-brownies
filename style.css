@@ -419,3 +419,24 @@ textarea{
 .premium{
     background:#D4A017;
 }
+/* CATEGORY SECTION */
+
+.category-section{
+    margin-bottom:60px;
+}
+
+.category-title{
+    font-size:36px;
+    color:#3B2314;
+    margin:40px 0 20px;
+    padding-left:20px;
+    border-left:5px solid #C1121F;
+    font-family:Georgia, serif;
+}
+
+.category-products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
