@@ -462,3 +462,15 @@ textarea{
     border-color:#9B111E;
     box-shadow:0 0 10px rgba(155,17,30,0.2);
 }
+
+/* OUT OF STOCK */
+
+.out-of-stock{
+    background:#FCE8EA;
+    color:#9B111E;
+    border:2px solid #9B111E;
+    padding:15px;
+    border-radius:12px;
+    font-weight:bold;
+    text-align:center;
+}
