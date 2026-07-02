@@ -122,7 +122,7 @@ async function loadProducts(){
         csv.split("\n")
            .slice(1);
 
-    let html = "";
+    let categories = {};
 
     rows.forEach(row => {
 
@@ -140,6 +140,9 @@ async function loadProducts(){
         const image =
             cols[2].trim();
 
+        const category =
+            cols[3].trim();
+
         const badge =
             cols[4].trim();
 
@@ -154,54 +157,87 @@ async function loadProducts(){
             cols[7].trim();
 
         if(!quantities[productId]){
-    quantities[productId] = 1;
-}
+            quantities[productId] = 1;
+        }
 
         if(available !== "TRUE")
             return;
 
+        if(!categories[category]){
+            categories[category] = [];
+        }
+
+        categories[category].push(`
+
+            <div class="product-card">
+
+                <img src="images/${image}">
+
+                ${badge ?
+                `<div class="badge ${badge.toLowerCase()}">
+                    ${badge}
+                </div>`
+                : ""}
+
+                <h3>${name}</h3>
+
+                <p>${description}</p>
+
+                <h4>₹${price}</h4>
+
+                <div class="quantity">
+
+                    <button onclick="changeQty('${productId}',-1)">
+                        −
+                    </button>
+
+                    <span id="${productId}Qty">
+                        1
+                    </span>
+
+                    <button onclick="changeQty('${productId}',1)">
+                        +
+                    </button>
+
+                </div>
+
+                <button
+                    class="add-cart-btn"
+                    onclick="addToCart(
+                    '${name}',
+                    ${price},
+                    '${productId}')">
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        `);
+
+    });
+
+    let html = "";
+
+    Object.keys(categories).forEach(category => {
+
         html += `
-        <div class="product-card">
 
-            <img src="images/${image}">
+            <div class="category-section">
 
-            ${badge ?
-`<div class="badge ${badge.toLowerCase()}">
-    ${badge}
-</div>`
-: ""}
-            <h3>${name}</h3>
+                <h2 class="category-title">
+                    ${category}
+                </h2>
 
-            <p>${description}</p>
+                <div class="category-products">
 
-            <h4>₹${price}</h4>
+                    ${categories[category].join("")}
 
-            <div class="quantity">
+                </div>
 
-    <button onclick="changeQty('${productId}',-1)">
-        −
-    </button>
+            </div>
 
-    <span id="${productId}Qty">
-        1
-    </span>
-
-    <button onclick="changeQty('${productId}',1)">
-        +
-    </button>
-
-</div>
-            <button
-class="add-cart-btn"
-onclick=
-"addToCart(
-'${name}',
-${price},
-'${productId}')">
-    Add to Cart
-</button>
-
-        </div>
         `;
     });
 
@@ -209,7 +245,6 @@ ${price},
         "productsContainer"
     ).innerHTML = html;
 }
-
 loadProducts();
 function sendWhatsApp(){
 
