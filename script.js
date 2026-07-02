@@ -160,8 +160,6 @@ async function loadProducts(){
             quantities[productId] = 1;
         }
 
-        if(available !== "TRUE")
-            return;
 
         if(!categories[category]){
             categories[category] = [];
